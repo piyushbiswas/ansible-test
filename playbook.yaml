@@ -6,6 +6,6 @@
   tasks:
     - name: Create a directory
       file:
-        path: test_directory/
+        path: /home/piyush/Downloads/ansible-test/test_directory/
         state: directory
 
