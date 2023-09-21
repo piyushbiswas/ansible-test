@@ -2,6 +2,8 @@
 - name: Simple Test Playbook
   hosts: localhost  # You can change this to your target host/group
   become: yes  # This allows the task to run with elevated privileges (sudo)
+  become_method: su
+  become_user: root
 
   tasks:
     - name: Create a directory
