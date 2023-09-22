@@ -8,6 +8,6 @@
   tasks:
     - name: Create a directory
       file:
-        path: /home/piyush/Downloads/test/test_directory/
+        path: /Users/piyush.biswas/Documents/Project-Ansible/semaphore-ui/yamls/testing1/
         state: directory
 
