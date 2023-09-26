@@ -1,13 +1,8 @@
 ---
-- name: Simple Test Playbook
-  hosts: localhost  # You can change this to your target host/group
-  become: yes  # This allows the task to run with elevated privileges (sudo)
-  become_method: su
-  become_user: root
-
+- name: Send Message to User
+  hosts: localhost
   tasks:
-    - name: Create a directory
-      file:
-        path: /Users/piyush.biswas/Documents/Project-Ansible/semaphore-ui/yamls/testing1/
-        state: directory
+    - name: Send Message
+      command: echo "Hello, This is a message for you!" > /dev/tty
+      become: yes
 
