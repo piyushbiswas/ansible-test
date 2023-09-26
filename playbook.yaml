@@ -1,8 +1,9 @@
 ---
 - name: Send Message to User
   hosts: localhost
+  become: yes
+  become_method: su  # Use 'su' as the privilege escalation method
+  become_user: root  # Specify the user you want to become (e.g., root)
   tasks:
     - name: Send Message
       command: echo "Hello, This is a message for you!" > /dev/tty
-      become: yes
-
